@@ -17,7 +17,7 @@ public class DcUniverseTest {
 			System.out.println("**************** DC Universe****************");
 			System.out.println("------------------ Menu --------------------");
 			System.out.println("Type 1 to display Super Heroes List");
-			System.out.println("Type 2 to search Creators information according to Notable Work");
+			System.out.println("Type 2 to search Creators' information according to Notable Work");
 			System.out.println("Type 3 to add a new Super Hero");
 			System.out.println("Type 4 to find the newest Super Hero");
 			System.out.println("Type 5 to find a Super Hero and change the year of creation");

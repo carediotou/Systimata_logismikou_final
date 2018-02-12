@@ -1,3 +1,5 @@
+import java.util.Calendar;
+
 public class Heroes {
 	static Heroes heroes[]=new Heroes [10];
 	private String heroname;
@@ -5,6 +7,7 @@ public class Heroes {
 	private String power;
 	private int creationyear;
 	private String url;
+	private int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 	static int counterHeroes=0;
 
 	public Heroes(String heroname, String identity, String power, int creationyear, String url) {
@@ -39,13 +42,17 @@ public class Heroes {
 		return creationyear;
 	}
 	public void setCreationyear(int creationyear) {
-		if(creationyear>0){
+		if(creationyear > 0 && creationyear < currentYear) {
 			this.creationyear=creationyear;
+			System.out.println("The information has been changed: ");
+			System.out.println("");
 		}
-		else{
-			System.out.println("Creation year hasn't changed because the number was worng");
+	else {
+		System.out.println("Creation year hasn't been changed because the number was wrong. The information remained the same:");
+		System.out.println("");
 		}
 	}
+
 	public String getUrl() {
 		return url;
 	}

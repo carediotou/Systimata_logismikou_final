@@ -40,7 +40,7 @@ public class Creators {
 		this.heroname=heroname;
 	}
 	public String toString() {
-		return "Creators [name=" +name + ",Birth Date=" +birthdate+ ",Died=" +died+ ",Notablework="+ heroname.getHeroName()+ "]";
+		return "Creators info: The name of our creator is " +name + ", his/her birthdate is " +birthdate+ ", he/she died " +died+ " and his notablework is "+ heroname.getHeroName()+ ".";
 	}
 
 }
