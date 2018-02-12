@@ -49,10 +49,17 @@ public class DcUniverseTest {
 				for(int y=0; y<Heroes.heroes.length; y++){
 					if(Heroes.heroes[y] != null){
 						if (Heroes.heroes[y].getHeroName().equals(name)) {
-							System.out.println(Creators.creators[y].toString());
-							//counter++;
-							System.out.println("*************************************************************************************************************************************************************************************************");
-							System.out.println("");
+							counter++;
+							if (Creators.creators[y] != null) {
+								System.out.println(Creators.creators[y].toString());
+								System.out.println("*************************************************************************************************************************************************************************************************");
+								System.out.println("");
+							}
+							else {
+								System.out.println("There is no creator recorded for this Hero");
+								System.out.println("");
+								continue;
+							}
 						}
 					}
 				}
