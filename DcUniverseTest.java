@@ -21,58 +21,62 @@ public class DcUniverseTest {
 			System.out.println("Type 3 to add a new Super Hero");
 			System.out.println("Type 4 to find the newest Super Hero");
 			System.out.println("Type 5 to find a Super Hero and change the year of creation");
-			System.out.println("Type here:");
+			System.out.print("Type here: ");
 
 			int choice = scanner.nextInt();
+			System.out.println("");
+
 
 			if (choice == 1){
-				System.out.println("List of DC Universe Super Heroes : ");
-				/*for (Heroes heroes: Heroes.heroes){
-					if (heroes!= null)
-						//System.out.println(Heroes.heroes[counterHeroes]);
-					    System.out.println(heroes.toString());
-				}*/
+				System.out.println("****************List of DC Universe Super Heroes****************");
+				System.out.println("");
 				for(int y=0; y<Heroes.heroes.length; y++) {
 					if(Heroes.heroes[y] != null) {
 						System.out.println("---- Hero "+(y+1)+" ----");
 						System.out.println(Heroes.heroes[y].toString());
+						System.out.println("*************************************************************************************************************************************************************************************************");
 						System.out.println("");
 					}
 				}
 			}
 
 			else if (choice == 2){
-				System.out.println("");
-				System.out.println("Give the name of a Super Hero to see from whom he is created by.");
+				System.out.println("Give the name of a Super Hero to see its creator");
 				System.out.print("Type here: ");
 				String name = scanner.next();
+				System.out.println("");
 				int counter=0;
 				for(int y=0; y<Heroes.heroes.length; y++){
 					if(Heroes.heroes[y] != null){
 						if (Heroes.heroes[y].getHeroName().equals(name)) {
 							System.out.println(Creators.creators[y].toString());
+							//counter++;
+							System.out.println("*************************************************************************************************************************************************************************************************");
 							System.out.println("");
-							counter++;
 						}
 					}
 				}
 				if (counter==0)
 					System.out.println("No results found");
+					System.out.println("*************************************************************************************************************************************************************************************************");
+					System.out.println("");
 			}
 
 			else if (choice==3) {
 				System.out.print("Insert Super Hero name: ");
 				String name=scanner.next();
-				System.out.print("Insert the true Identity: ");
+				System.out.print("Insert the Real Identity: ");
 				String identity=scanner.next();
 				System.out.print("Insert the Super Power: ");
 				String power=scanner.next();
-				System.out.print("Insert the Creation Year :");
+				System.out.print("Insert the Creation Year: ");
 				int creationyear=scanner.nextInt();
 				System.out.print("Insert Google Image Url: ");
 				String url=scanner.next();
 				Heroes NewHeroes = new Heroes(name,identity,power,creationyear,url);
-				System.out.println(name +" has been stored");
+				System.out.println("");
+				System.out.println("Super Hero "+name +" has been stored");
+				System.out.println("*************************************************************************************************************************************************************************************************");
 				System.out.println("");
 			}
 
@@ -89,6 +93,7 @@ public class DcUniverseTest {
 					}
 				}
 				System.out.println("The newest Super Hero is " +Heroes.heroes[row].getHeroName()+" and his creation Year is " +max);
+				System.out.println("*************************************************************************************************************************************************************************************************");
 				System.out.println("");
 			}
 			else if(choice==5){
@@ -98,32 +103,42 @@ public class DcUniverseTest {
 						++count;
 					}
 				}
-				System.out.println("Insert a number between 1 and "+count+" to to see the details of a SuperHero in this index.");
+				System.out.print("Insert a number between 1 and "+count+" to to see the details of a SuperHero in this index: ");
 				int index=scanner.nextInt() - 1;
+				System.out.println("");
 
 				if(Heroes.heroes[index]!= null){
-						System.out.println("The Hero was found in index is " +Heroes.heroes[index].getHeroName());
-						System.out.println("The creation date is:" +Heroes.heroes[index].getCreationyear());
-						System.out.print("If you want to change the Creation Year press 0. If you want to continue press 1.");
+						System.out.println("The Hero was found in index " +(index+1)+ " is " +Heroes.heroes[index].getHeroName());
+						System.out.println("The creation date was " +Heroes.heroes[index].getCreationyear());
+						System.out.print("If you want to change the Creation Year press 0. If you want to continue press 1: ");
 						System.out.println("");
 						int type = scanner.nextInt();
 						if(type == 0) {
-							System.out.println("Enter the year of your choice :");
+							System.out.print("Enter the year of your choice: ");
+							System.out.println("");
 							int NewCyear=scanner.nextInt();
 							Heroes.heroes[index].setCreationyear(NewCyear);
 							System.out.println(Heroes.heroes[index].toString());
-							System.out.println("");
+							System.out.println("*************************************************************************************************************************************************************************************************");
 							System.out.println("");
 						}
-						else continue;
+						else
+						{
+							System.out.println("");
+							continue;
+						}
 
 				}
 				else
 					System.out.println("There are no Infos about this Index.");
+					System.out.println("*************************************************************************************************************************************************************************************************");
+					System.out.println("");
 
 			}
 			else {
 				System.out.println("Wrong Input, please try again.");
+				System.out.println("");
+				System.out.println("*************************************************************************************************************************************************************************************************");
 				System.out.println("");
 			}
 

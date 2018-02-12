@@ -55,6 +55,6 @@ public class Heroes {
 
 
 	public String toString() {
-		return "Super Heroe :"+ heroname + "\nReal Identity " + identity +"\nPower: " + power+ "\nCreation Year:"+creationyear+ "\nGoogle image ulr: " + url;
+		return "- Super Heroe: "+ heroname + "\n  ~ Real Identity: " + identity +"\n  ~ Power: " + power+ "\n  ~ Creation Year: "+creationyear+ "\n  ~ Google Image Url: " + url;
 	}
 }
