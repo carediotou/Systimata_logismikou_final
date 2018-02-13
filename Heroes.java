@@ -41,7 +41,7 @@ public class Heroes {
 	public int getCreationyear() {
 		return creationyear;
 	}
-	public void setCreationyear(int creationyear) {
+	public void setCreationyear(int creationyear) {  /* πραγματοποιείτε έλεγχος input τιμής για την ημερομηνία δημιουργίας με τη χρήση του currentYear */
 		if(creationyear > 0 && creationyear < currentYear) {
 			this.creationyear=creationyear;
 			System.out.println("The information has been changed: ");

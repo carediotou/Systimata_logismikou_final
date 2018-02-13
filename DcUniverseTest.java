@@ -50,7 +50,7 @@ public class DcUniverseTest {
 					if(Heroes.heroes[y] != null){
 						if (Heroes.heroes[y].getHeroName().equals(name)) {
 							counter++;
-							if (Creators.creators[y] != null) {
+							if (Creators.creators[y] != null) {   /* μπορεί να έχει καταχωρηθεί ήρωας που δεν συνδέεται με δημιουργό */
 								System.out.println(Creators.creators[y].toString());
 								System.out.println("*************************************************************************************************************************************************************************************************");
 								System.out.println("");
@@ -149,8 +149,8 @@ public class DcUniverseTest {
 				System.out.println("");
 			}
 
-	}
-  }
+	} /* end while */
+  } /* end main */
 }
 
 
